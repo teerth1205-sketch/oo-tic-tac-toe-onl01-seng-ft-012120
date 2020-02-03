@@ -37,7 +37,7 @@ class TicTacToe
   end 
   
   def valid_move?(position)
-    if @board[position] == nil || @board[position] == false  || @board[position] == "X" ||  @board[position]  == "O"
+    if !(position_taken?(position)) && @board[position] == nil || @board[position] == false  || @board[position] == "X" ||  @board[position]  == "O"
       false
     else 
       true 
